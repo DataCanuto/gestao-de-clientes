@@ -1,0 +1,22 @@
+{
+  "_leia_me": "Palavra encontrada entre parênteses no nome do arquivo (comparada em maiúsculas, sem acento e sem ponto) -> situação. Palavras que não estão aqui são ignoradas: 'V', 'Vl' e 'Valor' apenas abreviam 'Valor', e a situação vem da palavra seguinte ('Vl Inct.' -> VALOR_INCONTROVERSO).",
+  "_fonte": "Cruzamento, pelo número do processo, das siglas extraídas pelo notebook com a coluna 'Situação' da planilha de controle do escritório (Tabela Clientes.xlsx) (115 clientes). Ver docs/migration.md.",
+  "_desconhecidas": "Siglas fora desta tabela (ex.: VS, CORREÇÃO, VALOR REMANESCENTE) e planilhas sem sigla ficam com situação VERIFICAR, para correção manual no frontend.",
+  "siglas": {
+    "VT": "VALOR_TOTAL",
+    "TOTAL": "VALOR_TOTAL",
+    "VF": "VALOR_FINAL",
+    "FINAL": "VALOR_FINAL",
+    "VI": "VALOR_INCONTROVERSO",
+    "INCT": "VALOR_INCONTROVERSO",
+    "INCTR": "VALOR_INCONTROVERSO",
+    "INCNT": "VALOR_INCONTROVERSO",
+    "ICTR": "VALOR_INCONTROVERSO",
+    "INCONTROVERSO": "VALOR_INCONTROVERSO",
+    "AC": "ACORDO",
+    "ACD": "ACORDO",
+    "ACORDO": "ACORDO",
+    "CANCELADA": "CANCELADO",
+    "CANCELADO": "CANCELADO"
+  }
+}

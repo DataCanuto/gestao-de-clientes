@@ -1,0 +1,5 @@
+{
+  "_leia_me": "Copie para correcoes_manuais.json (ignorado pelo Git). Chave = nome exato do arquivo. A correção só preenche campos que a extração deixou vazios. Datas no formato dd/mm/aaaa.",
+  "NF Fulano de Tal (2).pdf": {"data_emissao": "12/01/2023"},
+  "Planilha Comissão Beltrano da Silva (Juliana).pdf": {"corretor": "Juliana"}
+}

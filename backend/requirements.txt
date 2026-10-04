@@ -1,0 +1,22 @@
+# --- API ---
+fastapi==0.141.1
+uvicorn[standard]==0.54.0   # servidor ASGI que executa o FastAPI
+pydantic-settings==2.15.0   # configuração via variáveis de ambiente / .env
+python-multipart==0.0.32    # leitura de multipart/form-data (upload de arquivos)
+
+# --- Extração de PDF (bibliotecas herdadas do notebook) ---
+PyMuPDF==1.28.2      # renderiza páginas como imagem para o OCR (NF) e lê tabelas (Planilha)
+PyPDF2==3.0.1        # camada de texto (Prestação); sucessor: pypdf (roadmap)
+pytesseract==0.3.13  # ponte Python -> Tesseract OCR (instalado no sistema)
+Pillow==12.3.0       # imagem intermediária entre PyMuPDF e Tesseract
+
+# --- Banco de dados ---
+# Windows com Smart App Control: as extensões compiladas do SQLAlchemy podem ser
+# bloqueadas. O instalar.ps1 detecta e instala a versão pura em Python (mesma
+# versão, wheel py3-none-any). Ver docs/producao.md.
+SQLAlchemy==2.1.1        # ORM: tabelas como classes Python, consultas em Python
+alembic==1.20.0          # migrations (versões do esquema do banco)
+psycopg[binary]==3.3.6   # driver PostgreSQL (psycopg 3)
+
+# --- Relatório .xlsx (GET /relatorios/clientes.xlsx, pastas organizadas) ---
+openpyxl==3.1.5

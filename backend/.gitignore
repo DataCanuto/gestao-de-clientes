@@ -1,0 +1,13 @@
+# Ambiente
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Configuração local (credenciais)
+.env
+
+# Dados reais de clientes: nunca versionar
+app/extraction/data/correcoes_manuais.json
+storage/
+logs/

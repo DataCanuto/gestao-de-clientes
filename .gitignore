@@ -1,0 +1,44 @@
+# Saídas geradas com dados reais de clientes: nunca versionar
+documentos_organizados/
+backups/
+
+# Credenciais e configuração local
+.env
+.env.*
+!.env.example
+
+# Dados reais de clientes (ficam só nesta máquina)
+backend/storage/
+backend/logs/
+backend/app/extraction/data/correcoes_manuais.json
+# Notebook (v1): originais com outputs e correções reais
+DataManagement_Project/_local/
+*.dump
+*.backup
+*.sql
+*.db
+*.sqlite*
+*.csv
+*.xls
+*.xlsx
+*.docx
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Node / build
+node_modules/
+frontend/dist/
+
+# Logs, IDE e sistema
+*.log
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

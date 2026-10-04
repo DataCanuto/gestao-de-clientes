@@ -1,0 +1,5 @@
+-r requirements.txt
+
+# --- Testes ---
+pytest==9.1.1
+httpx2==2.13.1   # usado pelo TestClient do FastAPI/Starlette nos testes da API

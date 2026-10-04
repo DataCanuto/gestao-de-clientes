@@ -1,0 +1,17 @@
+[project]
+name = "gestao-clientes-backend"
+version = "0.1.0"
+description = "Processamento e versionamento de documentos PDF (NF, Planilha Comissão, Prestação de Contas)"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = [
+    "ocr: exige o Tesseract instalado (lento). Pule com: pytest -m 'not ocr'",
+    "banco: usa o PostgreSQL de testes (<POSTGRES_DB>-teste). Pule com: pytest -m 'not banco'",
+]
+filterwarnings = [
+    # Conhecido e documentado: PyPDF2 foi mantido por paridade (ver pdf_text_reader.py).
+    "ignore:PyPDF2 is deprecated:DeprecationWarning",
+]
