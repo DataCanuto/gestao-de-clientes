@@ -1,0 +1,9 @@
+{
+  "_leia_me": "Copie para _local/correcoes_notebook.json (ignorado pelo Git). Chave = nome exato do arquivo.",
+  "datas_manuais": {
+    "NF Fulano de Tal (2).pdf": "12/01/2023"
+  },
+  "corretor_nao_encontrado": {
+    "Planilha Comissão Beltrano da Silva.pdf": "Juliana"
+  }
+}
