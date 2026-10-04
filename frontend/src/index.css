@@ -1,0 +1,159 @@
+/* Tokens de cor e base. As cores de gráfico e de status seguem uma paleta
+   validada para daltonismo e contraste; o tema escuro tem valores próprios
+   (não é uma inversão automática). */
+
+:root {
+  color-scheme: light;
+  --pagina: #f4f4f1;
+  --superficie: #fcfcfb;
+  --superficie-2: #f0efec;
+  --tinta: #0b0b0b;
+  --tinta-2: #52514e;
+  --tinta-suave: #6f6e69;
+  --linha: #e1e0d9;
+  --borda: rgba(11, 11, 11, 0.12);
+
+  --marca: #1f4e78;
+  --marca-texto: #ffffff;
+  --marca-leve: #e3edf8;
+  --foco: #2a78d6;
+
+  /* gráfico: uma série (azul) e o trilho do medidor (mesma cor, mais clara) */
+  --serie-1: #2a78d6;
+  --trilho: #cde2fb;
+
+  /* status: sempre com ícone e texto, nunca só a cor */
+  --bom: #0ca30c;
+  --bom-texto: #006300;
+  --bom-fundo: #e5f4e5;
+  --alerta: #fab219;
+  --alerta-texto: #7a5200;
+  --alerta-fundo: #fdf3dc;
+  --serio: #ec835a;
+  --serio-texto: #8f3a15;
+  --serio-fundo: #fce9e1;
+  --critico: #d03b3b;
+  --critico-texto: #a32424;
+  --critico-fundo: #fbe5e5;
+  --info-texto: #184f95;
+  --info-fundo: #e3edf8;
+
+  --raio: 10px;
+  --sombra: 0 1px 2px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--tinta);
+  background: var(--pagina);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --pagina: #0d0d0d;
+    --superficie: #1a1a19;
+    --superficie-2: #242422;
+    --tinta: #ffffff;
+    --tinta-2: #c3c2b7;
+    --tinta-suave: #9d9c95;
+    --linha: #2c2c2a;
+    --borda: rgba(255, 255, 255, 0.12);
+
+    --marca: #3987e5;
+    --marca-texto: #0b0b0b;
+    --marca-leve: #16263a;
+    --foco: #6da7ec;
+
+    --serie-1: #3987e5;
+    --trilho: #184f95;
+
+    --bom-texto: #0ca30c;
+    --bom-fundo: #102410;
+    --alerta-texto: #fab219;
+    --alerta-fundo: #2b2310;
+    --serio-texto: #ec835a;
+    --serio-fundo: #2e1a12;
+    --critico-texto: #ef7a7a;
+    --critico-fundo: #2e1414;
+    --info-texto: #86b6ef;
+    --info-fundo: #16263a;
+    --sombra: none;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--pagina);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.25;
+}
+h2 {
+  font-size: 1.15rem;
+}
+h3 {
+  font-size: 1rem;
+}
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--info-texto);
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+input[type='text'],
+input[type='search'],
+input[type='date'],
+input:not([type]),
+select {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--borda);
+  border-radius: 7px;
+  background: var(--superficie);
+  min-height: 2.25rem;
+}
+
+input[aria-invalid='true'],
+select[aria-invalid='true'] {
+  border-color: var(--alerta);
+  box-shadow: 0 0 0 1px var(--alerta);
+}
+
+:focus-visible {
+  outline: 2px solid var(--foco);
+  outline-offset: 2px;
+}
+
+code {
+  font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.somente-leitor-de-tela {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
